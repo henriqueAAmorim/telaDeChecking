@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Checkin</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anybody&family=Orbitron:wght@500&family=Roboto+Mono&display=swap');
+
+        body{
+            margin: 0;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        body * {
+            box-sizing: border-box;
+        }
+
+        .main-checking{
+            width: 100hw;
+            height: 100vh;
+            background-color: rgb(35, 18, 49);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .esquerda-checking{
+            width: 50hw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .esquerda-checking > h1{
+            color: aqua;
+            font-size: 3vw;
+        }
+
+        .esquerda-imagem{
+            width: 25vw;
+        }
+
+        .direita.checking{
+            width: 50hw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-checking{
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px 35px;
+            margin: 10px;
+            background-color: rgb(61, 3, 102);
+            border-radius: 20px;
+            box-shadow: 0px 10px 40px #00000077;
+        }
+
+        .card-checking > h1{
+            color: aqua;
+            font-weight: 800;
+            margin: 0;
+            padding: 25px;
+        }
+
+        .textfield{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin: 10px 0px;
+        }
+
+        .textfield > input{
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            padding: 15px;
+            color: rgb(249, 252, 255);
+            background-color: blueviolet;
+            font-size: 12pt;
+            /*box-shadow: 0px 10px 40px #00000077;*/
+            outline: none;
+            font-family: verdana;
+            box-sizing: border-box;
+        }
+
+        .textfield > input::placeholder{
+            color: rgb(197, 197, 197);
+        }
+
+        .textfield > label{
+            color: aliceblue;
+            margin-bottom: 10px;
+            font-family: verdana;
+            font-weight: 800;
+        }
+
+        .btn-checking{
+            width: 100%;
+            padding: 16px 0px;
+            margin: 25px;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: blueviolet;
+            background: aqua;
+            box-shadow: 0px 10px 40px -12px #1df1c377;
+        }
+        
+        @media only screen and (max-width: 950px) {
+            .card-checking{
+                width: 85%
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .main-checking{
+                flex-direction: column;
+            }
+            .esquerda-checking > h1{
+                display: none;
+            }
+            .direita.checking{
+                width: 100%;
+                height: auto;
+            }
+            .esquerda-checking{
+                width: 100%;
+                height: auto;
+            }
+            .esquerda-imagem{
+                width: 50vw;
+            }
+            .card-checking{
+                width: 90%;
+            }
+        }
+        
+
+    </style>
+
+</head>
+<body>
+    <div class="main-checking">
+        <div class="esquerda-checking">
+            <h1>Digite seu nome para poder jogar</h1>
+            <img src="pingpong.svg" class="esquerda-imagem" alt="pingpong animacao">
+        </div>
+        <div class="direita-checking">
+            
+            <div class="card-checking">
+                <h1>CHECKIN</h1>
+                <div class="textfield">
+                    <label for="jogador">Jogador</label>
+                    <input type="text" nome="jogador" placeholder="Nome do jogador">
+                </div>
+                <button class="btn-checking">Entrar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
